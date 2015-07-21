@@ -1,0 +1,9 @@
+<div class = 'col-xs-10 col-xs-offset-1 booyah-box'>
+  <h1>Enter Your Place Details</h1><br />
+  <%= simple_form_for @place do |place| %>
+    <%= place.input :name, placeholder: 'Aaron\'s Pizza', error: 'Restaurant name is mandatory, please specify one' %>
+    <%= place.input :address, placeholder: '1542 Quan St., Birmingham AL, 99210' %>
+    <%= place.input :description, hint: 'Tell us about this place!' %>
+    <%= place.submit "Create", :class => 'btn btn-primary pull-right'%>
+  <% end %>
+</div>
