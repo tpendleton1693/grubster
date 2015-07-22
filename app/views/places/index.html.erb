@@ -6,7 +6,7 @@
   <p><%= place.description %></p><br />
 
   <% if place.user.present? %>
-    <small>Created by - <%= place.user.email %></small>
+    <small class = 'pull-right' >Created by - <%= place.user.email %></small>
   <% end %>
 </div>
 <% end %>
