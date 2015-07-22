@@ -45,3 +45,12 @@
   <!-- End div for buttons -->
 </div>
 <!-- End div for Place description -->
+
+<div class = 'clear'></div>
+
+<!-- Comments -->
+<%= simple_form_for @comment, :url => "#" do |f| %>
+  <%= f.input :message %>
+  <%= f.input :rating %>
+  <%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
+<% end %>
