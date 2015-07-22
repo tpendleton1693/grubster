@@ -43,3 +43,9 @@ body {
   border-radius: 3px;
   padding: 8px;
 }
+
+html, body, #map-canvas {
+  height: 300px;
+  margin: 0px;
+  padding: 0px;
+}

@@ -1,12 +1,47 @@
+<!-- Place description -->
 <div class = 'booyah-box col-xs-10 col-xs-offset-1'>
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p>
+
+  <!-- This adds the google map -->
+  <% if @place.latitude.present? && @place.longitude.present? %>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+      function initialize() {
+        var myPlace = new google.maps.LatLng(<%= @place.latitude %>,<%= @place.longitude %>);
+        var mapOptions = {
+          zoom: 14,
+          center: myPlace
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: myPlace,
+          draggable: true,
+          map: map,
+          animation: google.maps.Animation.DROP,
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <!-- Place map on page -->
+    <div class = 'text-center' id = 'map-canvas'></div>
+  <% end %>
+  <!-- This is the end of the google map code -->
+
+  <br />
+
+  <!-- Edit and delete buttons -->
   <div class = 'pull-right'>
     <% if current_user && current_user == @place.user %>
       <%= link_to "Edit", edit_place_path(@place), :class => 'btn btn-primary' %>
       <%= link_to "Destroy", place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger' %>
     <% end %>
   </div>
+  <!-- End div for buttons -->
 </div>
+<!-- End div for Place description -->
