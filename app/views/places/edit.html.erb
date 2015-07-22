@@ -1,0 +1,9 @@
+<div class = 'col-xs-10 col-xs-offset-1 booyah-box'>
+  <h1>Edit Your Place</h1><br />
+  <%= simple_form_for @place do |place| %>
+    <%= place.input :name, error: 'Restaurant name is mandatory, please specify one' %>
+    <%= place.input :address%>
+    <%= place.input :description%>
+    <%= place.submit "Update", :class => 'btn btn-primary pull-right'%>
+  <% end %>
+</div>
