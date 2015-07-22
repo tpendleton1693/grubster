@@ -51,6 +51,12 @@ gem 'geocoder'
 # Add figaro
 gem 'figaro', '>= 1.0.0'
 
+# Add CarrierWave
+gem 'carrierwave'
+
+# Fog gem
+gem 'fog', '~> 1.3.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

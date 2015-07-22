@@ -2,6 +2,7 @@ class Place < ActiveRecord::Base
   # Add associations
   belongs_to :user
   has_many :comments
+  has_many :photos
 
   # Geocoding
   geocoded_by :address
