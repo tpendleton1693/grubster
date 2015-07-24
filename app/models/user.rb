@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :places
   has_many :comments
+
+  def owns?(place)
+    self == place.user
+  end
 end
