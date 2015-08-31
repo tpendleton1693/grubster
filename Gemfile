@@ -60,6 +60,9 @@ gem 'fog', '~> 1.3.1'
 # Factory Girl
 gem "factory_girl_rails", "~> 4.0"
 
+# Placeholdit - For custom placeholder images
+gem "placeholdit"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
