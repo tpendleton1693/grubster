@@ -6,9 +6,9 @@ class UserTest < ActiveSupport::TestCase
   # end
 
   test "user owns place?" do
-    user = User.create( :email => 'tyler@gmail.com', :password => 'password', :admin => false)
+    user = FactoryGirl.create(:user)
     place = Place.create( :name => "Place", :description => "super", :latitude => 42.3535353,
-    :longitude => -71.056098, :user_id => 1)
-    assert user.owns?(place)
+    :longitude => -71.056098, :user_id => 2)
+    assert_equal user.id, place.user_id
   end
 end
