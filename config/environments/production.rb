@@ -4,11 +4,11 @@ Grubster::Application.configure do
   :address        => ENV['MAILGUN_SMTP_SERVER'],
   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'yourapp.heroku.com',
+  :domain         => 'grubster-tyler-pendleton.heroku.com',
   :authentication => :plain,
 }
 ActionMailer::Base.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => 'www.tylerpendleton.com' }
+  config.action_mailer.default_url_options = { :host => 'grubster-tyler-pendleton.heroku.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

@@ -1,15 +1,15 @@
 <div class = 'container'>
 
-  <div class = 'booyah-box col-xs-offset-1 col-xs-10'>
-    <div class = 'col-md-3 col-xs-10'>
+  <div class = 'booyah-box col-xs-offset-2 col-xs-8'>
+    <div class = 'col-xs-12 col-md-5'>
       <%= placeholdit_image_tag '200' %>
     </div>
 
-    <div class = 'col-md-7 col-xs-10'>
-      <h1><%= @user.email %></h1>
-      <h3>Member since <%= @user.created_at.strftime("%B %d, %Y") %>
-      <h4><%= @user.comments.count %> total comments</h4>
-      <h4><%= @user.comments.where(:rating => '5_stars').count %> 5-star ratings</h4>
+    <div class = 'col-xs-12 col-md-7'>
+      <h4><%= @user.email %></h4>
+      <h4>Member since <%= @user.created_at.strftime("%B %d, %Y") %></h4>
+      <h5><%= @user.comments.count %> total comments</h5>
+      <h5><%= @user.comments.where(:rating => '5_stars').count %> 5-star ratings</h5>
     </div>
   </div>
   <div class ='clear'></div>
