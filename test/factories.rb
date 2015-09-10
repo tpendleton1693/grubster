@@ -11,5 +11,8 @@ FactoryGirl.define do
     name "Food"
     description "Great stuff"
     address "44 newhaven st, Beverly Hills CA, 90210"
+    latitude(40.7127)
+    longitude(-74.0059)
+    association :user
   end
 end
